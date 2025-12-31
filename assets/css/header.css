@@ -1,0 +1,132 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+  padding: .5rem 1rem;
+  gap: 1rem;
+
+  h1 {
+    display: flex;
+    align-items: baseline;
+    font-size: 1.25rem;
+
+    a {
+      text-decoration: none;
+      transition: color 0.2s;
+      font-weight: 700;
+      color: black;
+
+      &:hover, &:focus {
+        color: firebrick;
+        outline: none;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      list-style-type: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.2s;
+      font-weight: 500;
+
+      &:hover, &:focus {
+        color: firebrick;
+        outline: none;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 2;
+
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* Animación cuando se abre */
+    &.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  .toggle-theme {
+    cursor: pointer;
+  }
+}
+
+/* RESPONSIVE - Mobile */
+@media (max-width: 768px) {
+  header {
+    .hamburger {
+      display: flex;
+    }
+
+    nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border-radius: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+
+      &.active {
+        max-height: fit-content;
+      }
+
+      ul {
+        list-style-type: none;
+        flex-direction: column;
+        gap: 0;
+        padding: 0rem 0;
+
+        li {
+          padding: 0.75rem 1rem;
+          border-bottom: 1px solid #eee;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    
+    .theme-toggle {
+      display: none;
+    }
+  }
+}

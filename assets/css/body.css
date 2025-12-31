@@ -1,0 +1,17 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 98.5vh;
+  font-family: "Computer Modern Serif", serif;
+  /*font-family: "Computer Modern Sans", sans-serif;*/
+  font-size: large;
+  color: black;
+  background-color: firebrick;
+  line-height: 1.2;
+}
