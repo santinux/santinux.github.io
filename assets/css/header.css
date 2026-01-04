@@ -4,11 +4,11 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background-color: firebrick;
   border-radius: 10px;
   border-bottom: 2px solid black;
-  padding: .5rem 1rem;
+  padding: 0.1rem 1rem;
   gap: 1rem;
+  background-color: firebrick;
 
   h1 {
     font-size: 1.25rem;
@@ -20,8 +20,8 @@ header {
       color: white;
 
       &:hover, &:focus {
-        color: black;
         outline: none;
+        color: black;
       }
     }
   }
@@ -36,20 +36,20 @@ header {
 
     a {
       text-decoration: none;
-      color: #FFFFFF;
       transition: color 0.2s;
       font-weight: 600;
+      color: white;
 
       &:hover, &:focus {
-        color: #000000;
         outline: none;
+        color: black;
       }
     }
   }
 
   p {
     color: #FFFFFF;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .hamburger {
@@ -66,8 +66,8 @@ header {
       display: block;
       width: 25px;
       height: 3px;
-      background-color: black;
-      transition: transform 0.3s, opacity 0.3s;
+      transition: transform 0.2s, opacity 0.5s;
+      background-color: white;
     }
 
     /* Animación cuando se abre */
@@ -101,25 +101,26 @@ header {
       top: 100%;
       left: 0;
       right: 0;
-      background-color: white;
       border-radius: 10px;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease-out;
+      background-color: firebrick;
 
       &.active {
         max-height: fit-content;
+        border-bottom: 2px solid black;
       }
 
       ul {
         list-style-type: none;
         flex-direction: column;
         gap: 0;
-        padding: 0rem 0;
+        padding: 0rem 0rem;
 
         li {
           padding: 0.75rem 1rem;
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid white;
 
           &:last-child {
             border-bottom: none;
