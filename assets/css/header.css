@@ -4,25 +4,23 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background-color: white;
+  background-color: firebrick;
   border-radius: 10px;
   border-bottom: 2px solid black;
   padding: .5rem 1rem;
   gap: 1rem;
 
   h1 {
-    display: flex;
-    align-items: baseline;
     font-size: 1.25rem;
 
     a {
       text-decoration: none;
       transition: color 0.2s;
       font-weight: 700;
-      color: black;
+      color: white;
 
       &:hover, &:focus {
-        color: firebrick;
+        color: black;
         outline: none;
       }
     }
@@ -38,15 +36,20 @@ header {
 
     a {
       text-decoration: none;
-      color: black;
+      color: #FFFFFF;
       transition: color 0.2s;
-      font-weight: 500;
+      font-weight: 600;
 
       &:hover, &:focus {
-        color: firebrick;
+        color: #000000;
         outline: none;
       }
     }
+  }
+
+  p {
+    color: #FFFFFF;
+    font-weight: 600;
   }
 
   .hamburger {
